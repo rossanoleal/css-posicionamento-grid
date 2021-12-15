@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Bikcraft</title>
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="./css/style.css" />
   </head>
   <body>
     <header class="header">
@@ -22,8 +22,8 @@
     </header>
 
     <main>
-      <article class="content">
-        <div class="introduction" aria-labelledby="label-introduction">
+      <article class="content" aria-labelledby="label-introduction">
+        <div class="introduction">
           <h1 id="label-introduction">Bicicletas Fietas a Mão</h1>
           <p>
             A Nimbus Stark é a melhor Bikcraft já criada pela nossa equipe. Ela
@@ -31,10 +31,15 @@
           </p>
           <a class="button" href="/">Ver Mais</a>
         </div>
-
-        <img src="./img/bicicleta.jpg" alt="Bicicleta Bikcraft preta" />
+        <div class="introduction-cover">
+          <img src="./img/bicicleta.jpg" alt="Bicicleta Bikcraft preta" />
+        </div>
       </article>
-      <article class="content" aria-labelledby="label-benefits">
+
+      <article
+        class="content content-benefits"
+        aria-labelledby="label-benefits"
+      >
         <h2 class="subtitle" id="label-benefits">Vantagens Bikcraft</h2>
         <ul class="benefits">
           <li class="benefits-item">

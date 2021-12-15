@@ -1,11 +1,11 @@
 body {
   margin: 0px;
-  background-color: #f7f7f7;
+  background: #f7f7f7;
   font-family: Arial, Helvetica, sans-serif;
   display: grid;
-  gap: 3.5rem;
+  gap: 3.75rem;
   justify-items: center;
-  margin-top: 3.5rem;
+  margin-top: 3.75rem;
 }
 
 img {
@@ -38,22 +38,23 @@ p {
 .header {
   display: grid;
   justify-items: center;
-  gap: 3.5rem;
+  gap: 3.75rem;
 }
 
 .menu {
   display: flex;
   flex-wrap: wrap;
-  gap: 1.2rem;
+  gap: 1.25rem;
   justify-content: center;
 }
 
 .menu a {
   display: block;
-  background-color: #fff;
+  background: #fff;
   padding: 1rem 2rem;
   border-radius: 4px;
-  color: black;
+  color: #000;
+  text-transform: uppercase;
   border: 2px solid transparent;
 }
 
@@ -68,13 +69,13 @@ p {
 }
 
 .introduction {
-  background-color: #fff;
-  padding: 1.2rem;
+  background: #fff;
+  padding: 2.5rem;
   text-align: right;
   position: relative;
   display: grid;
+  gap: 1.25rem;
   align-content: center;
-  gap: 1.2rem;
   justify-items: end;
 }
 
@@ -86,21 +87,27 @@ p {
   content: "";
   width: 60px;
   height: 4px;
-  background-color: #e21;
+  background: #e21;
   position: absolute;
   top: 30px;
   right: -30px;
 }
 
+.introduction-cover img {
+  object-fit: cover;
+  height: 100%;
+}
+
 .button {
-  background-color: #e21;
+  background: #e21;
   color: #fff;
   padding: 1rem 2rem;
   border-radius: 4px;
+  text-transform: uppercase;
 }
 
 .button:hover {
-  background-color: #900;
+  background: #900;
 }
 
 .subtitle {
@@ -111,18 +118,11 @@ p {
   padding: 2.5rem;
   align-self: center;
   background-image: url(./img/onda.svg);
-}
-
-.caption {
-  font-size: 3rem;
-  color: #c6c6c6;
-  text-align: right;
-  padding: 2.5rem;
-  align-self: center;
+  /* word-break: break-all; */
 }
 
 .benefits {
-  background-color: #fff;
+  background: #fff;
   padding: 2.5rem;
 }
 
@@ -133,12 +133,12 @@ p {
   padding: 1.25rem;
 }
 
-.benefits-item:hover {
-  border-left: 4px solid #e21;
+.benefits-item:nth-child(odd) {
+  background: #f7f7f7;
 }
 
-.benefits-item:nth-child(odd) {
-  background-color: #f7f7f7;
+.benefits-item:hover {
+  border-left: 4px solid #e21;
 }
 
 .benefits-item p {
@@ -147,8 +147,50 @@ p {
 
 footer {
   width: 100%;
-  background-color: #fff;
+  background: #fff;
   text-align: center;
   padding: 2.5rem;
   box-sizing: border-box;
+}
+
+/* responsive */
+@media (max-width: 1000px) {
+  .content-benefits {
+    grid-template-columns: 1fr;
+  }
+  .subtitle {
+    text-align: center;
+  }
+}
+
+@media (max-width: 600px) {
+  body {
+    gap: 30px;
+    margin-top: 20px;
+  }
+  .header {
+    gap: 30px;
+  }
+  .content {
+    grid-template-columns: 1fr;
+  }
+  .introduction {
+    text-align: left;
+    justify-items: start;
+  }
+  .introduction::before {
+    display: none;
+  }
+  .subtitle {
+    font-size: 3rem;
+  }
+}
+
+@media (max-width: 400px) {
+  .subtitle {
+    font-size: 2rem;
+  }
+  p {
+    font-size: 1rem;
+  }
 }
