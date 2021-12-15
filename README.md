@@ -19,7 +19,6 @@ Vantagens Bikcraft: 64px
 
 conteúdo principal: máximo 1000px
 
-Obs.: Não foi realizado a semântica ou responsividade do site.
 
 <div align="center">
   <img src="https://user-images.githubusercontent.com/62959702/144727122-3f5c1873-959a-4ebd-ace6-4a2f5abae213.png" width="700px" />
