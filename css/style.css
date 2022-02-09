@@ -1,11 +1,32 @@
+:root {
+  --color-primary: #e21;
+  --color-primary-dark: #900;
+  --color-bg-1: #f7f7f7;
+  --color-bg-2: #fff;
+  --color-text: #000;
+  --color-subtitle: rgba(0, 0, 0, 0.2);
+  --color-wave: url(./img/onda-clara.svg);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-bg-1: #111;
+    --color-bg-2: #000;
+    --color-text: #fff;
+    --color-subtitle: rgba(255, 255, 255, 0.2);
+    --color-wave: url(./img/onda-escura.svg);
+  }
+}
+
 body {
   margin: 0px;
-  background: #f7f7f7;
+  background: var(--color-bg-1);
   font-family: Arial, Helvetica, sans-serif;
   display: grid;
   gap: 3.75rem;
   justify-items: center;
   margin-top: 3.75rem;
+  color: var(--color-text);
 }
 
 img {
@@ -50,16 +71,16 @@ p {
 
 .menu a {
   display: block;
-  background: #fff;
+  background: var(--color-bg-2);
   padding: 1rem 2rem;
   border-radius: 4px;
-  color: #000;
+  color: var(--color-text);
   text-transform: uppercase;
   border: 2px solid transparent;
 }
 
 .menu a:hover {
-  border-color: #e21;
+  border-color: var(--color-primary);
 }
 
 .content {
@@ -69,7 +90,7 @@ p {
 }
 
 .introduction {
-  background: #fff;
+  background: var(--color-bg-2);
   padding: 2.5rem;
   text-align: right;
   position: relative;
@@ -87,7 +108,7 @@ p {
   content: "";
   width: 60px;
   height: 4px;
-  background: #e21;
+  background: var(--color-primary);
   position: absolute;
   top: 30px;
   right: -30px;
@@ -99,7 +120,7 @@ p {
 }
 
 .button {
-  background: #e21;
+  background: var(--color-primary);
   color: #fff;
   padding: 1rem 2rem;
   border-radius: 4px;
@@ -107,22 +128,22 @@ p {
 }
 
 .button:hover {
-  background: #900;
+  background: var(--color-primary-dark);
 }
 
 .subtitle {
   font-size: 4rem;
   text-transform: uppercase;
-  color: rgba(0, 0, 0, 0.2);
+  color: var(--color-subtitle);
   text-align: right;
   padding: 2.5rem;
   align-self: center;
-  background-image: url(./img/onda.svg);
+  background-image: var(--color-wave);
   /* word-break: break-all; */
 }
 
 .benefits {
-  background: #fff;
+  background: var(--color-bg-2);
   padding: 2.5rem;
 }
 
@@ -134,11 +155,11 @@ p {
 }
 
 .benefits-item:nth-child(odd) {
-  background: #f7f7f7;
+  background: var(--color-bg-1);
 }
 
 .benefits-item:hover {
-  border-left: 4px solid #e21;
+  border-left: 4px solid var(--color-primary);
 }
 
 .benefits-item p {
@@ -147,7 +168,7 @@ p {
 
 footer {
   width: 100%;
-  background: #fff;
+  background: var(--color-bg-2);
   text-align: center;
   padding: 2.5rem;
   box-sizing: border-box;
